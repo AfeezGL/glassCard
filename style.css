@@ -32,7 +32,6 @@ body {
     padding: 2rem 1.5rem 1rem 1.5rem;
     z-index: 100;
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
 }
 .card-type {
     position: relative;
@@ -106,3 +105,9 @@ body {
     margin-top: -75px;
     margin-left: -250px;
 }
+@supports ((-webkit-backdrop-filter: blur(8px))) {
+    .card {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+  }
